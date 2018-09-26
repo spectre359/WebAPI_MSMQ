@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI_MSMQ.UI", "WebAPI_MSMQ\WebAPI_MSMQ.UI.csproj", "{C3D88EA2-9048-4ACE-8D19-1C1AA5572858}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI_MSMQ.UI.Tests", "WebAPI_MSMQ.Tests\WebAPI_MSMQ.UI.Tests.csproj", "{3063B126-EBF3-41F8-8800-8A2FB9D08742}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI_MSMQ.API", "WebAPI_MSMQ.API\WebAPI_MSMQ.API.csproj", "{3A8C0C0E-35A8-4B0B-9D3B-7D514320223F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI_MSMQ.Models", "WebAPI_MSMQ.Models\WebAPI_MSMQ.Models.csproj", "{BC45522E-8D77-44CC-8129-344FB82EA41C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI_MSMQ.API.Tests", "WebAPI_MSMQ.API.Tests\WebAPI_MSMQ.API.Tests.csproj", "{7437917D-846F-49D4-A6E9-E8F4965FDD2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Message Handlers", "Message Handlers", "{46C5F988-CAED-4C75-80EF-82FDA5FF8FD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomersHandler", "CustomersHandler\CustomersHandler.csproj", "{8C27D792-862C-426B-A73E-15A5498C2700}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3D88EA2-9048-4ACE-8D19-1C1AA5572858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D88EA2-9048-4ACE-8D19-1C1AA5572858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D88EA2-9048-4ACE-8D19-1C1AA5572858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D88EA2-9048-4ACE-8D19-1C1AA5572858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3063B126-EBF3-41F8-8800-8A2FB9D08742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3063B126-EBF3-41F8-8800-8A2FB9D08742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3063B126-EBF3-41F8-8800-8A2FB9D08742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3063B126-EBF3-41F8-8800-8A2FB9D08742}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8C0C0E-35A8-4B0B-9D3B-7D514320223F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8C0C0E-35A8-4B0B-9D3B-7D514320223F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8C0C0E-35A8-4B0B-9D3B-7D514320223F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8C0C0E-35A8-4B0B-9D3B-7D514320223F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC45522E-8D77-44CC-8129-344FB82EA41C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC45522E-8D77-44CC-8129-344FB82EA41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC45522E-8D77-44CC-8129-344FB82EA41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC45522E-8D77-44CC-8129-344FB82EA41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7437917D-846F-49D4-A6E9-E8F4965FDD2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7437917D-846F-49D4-A6E9-E8F4965FDD2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7437917D-846F-49D4-A6E9-E8F4965FDD2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7437917D-846F-49D4-A6E9-E8F4965FDD2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C27D792-862C-426B-A73E-15A5498C2700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C27D792-862C-426B-A73E-15A5498C2700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C27D792-862C-426B-A73E-15A5498C2700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C27D792-862C-426B-A73E-15A5498C2700}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C27D792-862C-426B-A73E-15A5498C2700} = {46C5F988-CAED-4C75-80EF-82FDA5FF8FD8}
+	EndGlobalSection
+EndGlobal

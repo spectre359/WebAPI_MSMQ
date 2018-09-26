@@ -1,0 +1,26 @@
+﻿@model IEnumerable<WebAPI_MSMQ.Models.CustomerViewModel>
+@using GridMvc.Html
+
+@Html.Grid(Model).Columns(columns =>
+{
+
+columns.Add()
+        .Encoded(false)
+        .Sanitized(false)
+        .SetWidth(30)
+        .Filterable(true)
+        .Titled("Company name")
+        .RenderValueAs(d =>
+        @<b>
+            @Html.ActionLink(d.CompanyName, "CustomerDetails", "Customer", new { id = d.CustomerID }, null)
+        </b>);
+
+
+    columns.Add(o => o.OrdersCount)
+            .Titled("Number of orders")
+            .SetWidth(100);
+
+
+}).WithPaging(15).Sortable().Filterable().WithMultipleFilters()
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })

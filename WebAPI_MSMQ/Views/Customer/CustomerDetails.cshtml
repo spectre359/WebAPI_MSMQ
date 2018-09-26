@@ -1,0 +1,81 @@
+﻿@model WebAPI_MSMQ.Models.CustomerViewModel
+@using GridMvc.Html
+
+<div class="container">
+    <br />
+    <a href="@Url.Action("Index","Customer")" onclick="ShowLoading()" title="Back to list"><i class="fa fa-arrow-circle-left fa-5x "></i></a>
+    <br />
+
+    <div class="row">
+        <div class="col-sm-4">
+            <h2>@Html.DisplayFor(model => model.CompanyName)</h2>
+            <hr />
+            <table class="table table-bordered table-striped">
+                <tr>
+                    <td>
+                        <b>@Html.DisplayNameFor(model => model.ContactName)</b>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.ContactName)
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>@Html.DisplayNameFor(model => model.ContactTitle)</b></td>
+                    <td>@Html.DisplayFor(model => model.ContactTitle)</td>
+                </tr>
+                <tr>
+                    <td><b>@Html.DisplayNameFor(model => model.Address)</b></td>
+                    <td>@Html.DisplayFor(model => model.Address)</td>
+                </tr>
+                <tr>
+                    <td><b>@Html.DisplayNameFor(model => model.City)</b></td>
+                    <td>@Html.DisplayFor(model => model.City)</td>
+                </tr>
+                <tr>
+                    <td><b>@Html.DisplayNameFor(model => model.Region)</b></td>
+                    <td>@Html.DisplayFor(model => model.Region)</td>
+                </tr>
+                <tr>
+                    <td><b>@Html.DisplayNameFor(model => model.PostalCode)</b></td>
+                    <td>@Html.DisplayFor(model => model.PostalCode)</td>
+                </tr>
+                <tr>
+                    <td><b>@Html.DisplayNameFor(model => model.Country)</b></td>
+                    <td>@Html.DisplayFor(model => model.Country)</td>
+                </tr>
+                <tr>
+                    <td><b>@Html.DisplayNameFor(model => model.Phone)</b></td>
+                    <td>@Html.DisplayFor(model => model.Phone)</td>
+                </tr>
+                <tr>
+                    <td><b>@Html.DisplayNameFor(model => model.Fax)</b></td>
+                    <td>@Html.DisplayFor(model => model.Fax)</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <fieldset>
+            <legend>Orders</legend>
+            @Html.Grid(Model.Orders).Columns(columns =>
+       {
+           columns.Add(o => o.OrderID)
+                   .Titled("Order ID")
+                   .SetWidth(100);
+           columns.Add(o => o.ProductQuantity)
+                   .Titled("Products quantity")
+                   .SetWidth(100);
+           columns.Add(o => o.TotalPrice)
+                   .Titled("Total Price")
+                   .SetWidth(100);
+           columns.Add(o => o.InformationMessage)
+                   .Titled("Information message")
+                   .SetWidth(100);
+
+       }).WithPaging(15).Sortable().Filterable().WithMultipleFilters()
+
+        </fieldset>
+    </div>
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+</div>

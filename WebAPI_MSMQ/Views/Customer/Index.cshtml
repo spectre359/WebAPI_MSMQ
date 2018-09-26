@@ -1,0 +1,36 @@
+﻿<br />
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5">
+            <fieldset>
+                <legend>Filters</legend>
+                @using (Ajax.BeginForm("Search", "Customer", new AjaxOptions
+                {
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "CustomersList",
+                    LoadingElementId = "loading"
+                }, new { @class = "form-horizontal", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="col-lg-9"><input class="form-control" type="text" name="searchfield" id="searchfield" placeholder="search by name"></div>
+                    <div class="col-lg-1"><button class="btn btn-primary" title="Search" type="submit"><i class="fa fa-search"></i></button></div>                           
+                }
+            </fieldset>
+        </div>       
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-lg-12">
+            <fieldset>
+                <legend>Customers</legend>
+                <div id="CustomersList">
+                    @Html.Action("CustomersList", "Customer")
+                </div>
+            </fieldset>  
+        </div>              
+    </div>
+</div>
+
+
+
+
